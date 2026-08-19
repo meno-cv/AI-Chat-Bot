@@ -1,11 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AI Chat Bot</title>
+    <script src="https://unpkg.com/@wcj/markdown-to-html/dist/markdown.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <div class="d-flex justify-content-center align-items-center min-vh-100">
+
+        <div class="chat-card">
+
+            <div class="chat-header">
+                <div class="ai-icon">
+                    AI
+                </div>
+
+                <div>
+                    <h4>AI ChatBot</h4>
+                    <small>Ask me anything</small>
+                </div>
+            </div>
+
+            <div id="lblResponce" class="response-area">
+                <div class="welcome-message">
+                    <h5>How can I help you?</h5>
+                    <p>Type a question below to start chatting with the AI.</p>
+                </div>
+            </div>
+
+            <div class="input-area">
+
+                <input
+                    type="text"
+                    id="txtUserInput"
+                    class="form-control"
+                    placeholder="Type your message..."
+                >
+
+                <button
+                    type="button"
+                    class="send-btn"
+                    onclick="sendPromptOnAction()">
+                    Send
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
