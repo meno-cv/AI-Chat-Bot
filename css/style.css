@@ -1,0 +1,168 @@
+body {
+    background: #f4f6f8;
+    font-family: Arial, sans-serif;
+    color: #202124;
+}
+
+
+/* Main Chat Card */
+.chat-card {
+    width: 500px;
+    height: 600px;
+
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+}
+
+
+/* Header */
+.chat-header {
+    display: flex;
+    align-items: center;
+
+    padding: 22px 25px;
+
+    border-bottom: 1px solid #eeeeee;
+
+    background: #ffffff;
+}
+
+.ai-icon {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 12px;
+
+    background: #212529;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    margin-right: 14px;
+}
+
+.chat-header h4 {
+    margin: 0;
+
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.chat-header small {
+    color: #888;
+}
+
+
+/* Response Area */
+.response-area {
+    flex: 1;
+
+    padding: 25px;
+
+    overflow-y: auto;
+
+    background: #fafafa;
+}
+
+.welcome-message {
+    background: white;
+
+    padding: 18px 20px;
+
+    border-radius: 12px;
+
+    border: 1px solid #eeeeee;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.welcome-message h5 {
+    margin-bottom: 7px;
+
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.welcome-message p {
+    margin: 0;
+
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+/* Input Area */
+.input-area {
+    display: flex;
+    gap: 10px;
+
+    padding: 18px 20px;
+
+    background: white;
+
+    border-top: 1px solid #eeeeee;
+}
+
+.input-area input {
+    height: 45px;
+
+    border-radius: 10px;
+
+    border: 1px solid #dddddd;
+
+    box-shadow: none;
+}
+
+.input-area input:focus {
+    border-color: #999;
+
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Send Button */
+.send-btn {
+    border: none;
+
+    background: #212529;
+    color: white;
+
+    padding: 0 20px;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+.send-btn:hover {
+    background: #343a40;
+    transform: translateY(-1px);
+}
+
+
+/* Scrollbar */
+.response-area::-webkit-scrollbar {
+    width: 6px;
+}
+
+.response-area::-webkit-scrollbar-thumb {
+    background: #cccccc;
+
+    border-radius: 10px;
+}
