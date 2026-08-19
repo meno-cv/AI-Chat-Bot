@@ -23,9 +23,11 @@ function sendPromptOnAction() {
 
         const result = await response.json();
 
+        console.log("Backend response:", result);
+
         if (!response.ok) {
             throw new Error(
-                result.error?.message || "API request failed"
+                result.error || "API request failed"
             );
         }
 
@@ -41,10 +43,10 @@ function sendPromptOnAction() {
     })
     .catch((error) => {
 
-        console.error(error);
+        console.error("ERROR:", error);
 
         document.getElementById("lblResponce").innerHTML =
-            "<p>Something went wrong. Please try again.</p>";
+            "<p>Something went wrong: " + error.message + "</p>";
 
     });
 }

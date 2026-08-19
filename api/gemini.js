@@ -23,7 +23,7 @@ export default async function handler(req, res) {
                         {
                             parts: [
                                 {
-                                    text: req.body.text
+                                    text: String(req.body.text || "")
                                 }
                             ]
                         }
@@ -34,13 +34,22 @@ export default async function handler(req, res) {
 
         const data = await response.json();
 
-        return res.status(response.status).json(data);
+        console.log("Gemini response:", data);
+
+        if (!response.ok) {
+            return res.status(response.status).json({
+                error: data.error?.message || "Gemini API request failed"
+            });
+        }
+
+        return res.status(200).json(data);
 
     } catch (error) {
 
-        return res.status(500).json({
-            error: "Something went wrong"
-        });
+        console.error("Server error:", error);
 
+        return res.status(500).json({
+            error: error.message || "Server error"
+        });
     }
 }
